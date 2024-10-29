@@ -11,13 +11,12 @@ export default function Promessa() {
             setDivida(saoLonguinho("da vida"))
         }, 4000);
     })
-    return <>
-        <Menu />
-        <Container>
-            Promessas {(divida==="" ? "<carregando>" : divida)}
-        </Container>
-        <Footer />
-    </>
+return <>
+<Menu /> <Container>
+    Promessas {(divida==="" ? <img src="loading_3.gif" width={40} height={60}/> 
+    : divida)}
+</Container>  <Footer />
+</>
 }
 function saoLonguinho(texto) {
     setTimeout(()=>{
